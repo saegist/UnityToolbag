@@ -25,6 +25,7 @@ Alternatively you can just cherry pick the features you want and copy only those
 
 Here are some other repos that contain Unity goodies:
 
+- [FirstPersonController](https://github.com/nickgravelyn/FirstPersonController) - An open source first person controller for Unity 2019.4 and up.
 - [UnityTiled](https://github.com/nickgravelyn/UnityTiled) - This is my system for importing Tiled maps into Unity.
 - [Awesome-Unity](https://github.com/RyanNielson/awesome-unity) - This is a neat repo that just lists a bunch of other Unity repos. Check there for great stuff.
 
