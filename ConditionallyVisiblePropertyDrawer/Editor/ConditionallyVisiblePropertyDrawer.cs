@@ -21,17 +21,14 @@ namespace UnityToolbag
 
         public override float GetPropertyHeight(SerializedProperty property, GUIContent label)
         {
-            return ShouldDisplay(property) ? EditorGUI.GetPropertyHeight(property, label) : 0;
+            return ShouldDisplay(property) 
+                ? EditorGUI.GetPropertyHeight(property, label, includeChildren: true) 
+                : 0;
         }
 
-        private static bool ShouldDisplay(SerializedProperty property)
+        private bool ShouldDisplay(SerializedProperty property)
         {
-            var obj = property.serializedObject.targetObject;
-            var field = obj.GetType().GetField(
-                property.name, 
-                BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic
-            );
-            var attr = field.GetCustomAttributes(typeof(ConditionallyVisibleAttribute)).First() as ConditionallyVisibleAttribute;
+            var attr = (ConditionallyVisibleAttribute)attribute;
             var dependentProp = property.serializedObject.FindProperty(attr.propertyName);
             return dependentProp.boolValue;
         }
