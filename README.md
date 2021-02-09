@@ -5,6 +5,7 @@ This repo is a host for any little Unity scripts I write that are simple and eas
 ## Features
 
 - [CacheBehaviour](CacheBehaviour) - A drop-in replacement for `MonoBehaviour` as a script base class that provides caching of all standard properties.
+- [ConditionallyVisiblePropertyDrawer](ConditionallyVisiblePropertyDrawer) - A simple way to conditionally show/hide serialized properties on your objects.
 - [Dispatcher](Dispatcher) - Provides a mechanism for invoking code on the main thread from background threads.
 - [DrawTitleSafeArea](DrawTitleSafeArea) - Simple component you add to a camera to render the title safe area.
 - [Future](Future) - Simple implementation of the [future](http://en.wikipedia.org/wiki/Futures_and_promises) programming concept.
